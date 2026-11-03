@@ -1,3 +1,6 @@
 language: node_js
 node_js:
-  - 5
+  - lts/*
+# Install from the committed lockfile and never run dependency install scripts.
+install: npm ci --ignore-scripts
+script: npm test
